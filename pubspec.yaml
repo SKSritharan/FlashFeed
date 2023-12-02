@@ -18,6 +18,8 @@ dependencies:
   lucide_icons: ^0.257.0
   get: ^4.6.6
   shimmer: ^3.0.0
+  http: ^1.1.2
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:

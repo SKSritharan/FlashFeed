@@ -4,8 +4,10 @@ import 'package:lucide_icons/lucide_icons.dart';
 import '../helpers/app_theme.dart';
 import '../helpers/navigation_theme.dart';
 import '../widgets/custom_bottom_navigation.dart';
-import './headlines_screen.dart';
+import './headline_screen.dart';
 import './news_feed_screen.dart';
+import './search_screen.dart';
+import './setting_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -47,8 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
             setState(() => _currentIndex = index);
           },
           children: const <Widget>[
-            HeadlinesScreen(),
+            HeadlineScreen(),
+            SearchScreen(),
             NewsFeedScreen(),
+            SettingScreen(),
           ],
         ),
       ),
@@ -63,17 +67,33 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         items: <CustomBottomNavigationBarItem>[
           CustomBottomNavigationBarItem(
-              title: "Home",
-              icon: const Icon(LucideIcons.home, size: 20),
-              activeIcon: const Icon(LucideIcons.home, size: 20),
-              activeColor: navigationTheme.selectedItemColor,
-              inactiveColor: navigationTheme.unselectedItemColor),
+            title: "Home",
+            icon: const Icon(LucideIcons.home, size: 20),
+            activeIcon: const Icon(LucideIcons.home, size: 20),
+            activeColor: navigationTheme.selectedItemColor,
+            inactiveColor: navigationTheme.unselectedItemColor,
+          ),
           CustomBottomNavigationBarItem(
-              title: "My Feed",
-              icon: const Icon(LucideIcons.bookmark, size: 20),
-              activeIcon: const Icon(LucideIcons.bookmark, size: 20),
-              activeColor: navigationTheme.selectedItemColor,
-              inactiveColor: navigationTheme.unselectedItemColor),
+            title: "Search",
+            icon: const Icon(LucideIcons.search, size: 20),
+            activeIcon: const Icon(LucideIcons.search, size: 20),
+            activeColor: navigationTheme.selectedItemColor,
+            inactiveColor: navigationTheme.unselectedItemColor,
+          ),
+          CustomBottomNavigationBarItem(
+            title: "My Feed",
+            icon: const Icon(LucideIcons.bookmark, size: 20),
+            activeIcon: const Icon(LucideIcons.bookmark, size: 20),
+            activeColor: navigationTheme.selectedItemColor,
+            inactiveColor: navigationTheme.unselectedItemColor,
+          ),
+          CustomBottomNavigationBarItem(
+            title: "Settings",
+            icon: const Icon(LucideIcons.settings, size: 20),
+            activeIcon: const Icon(LucideIcons.settings, size: 20),
+            activeColor: navigationTheme.selectedItemColor,
+            inactiveColor: navigationTheme.unselectedItemColor,
+          ),
         ],
       ),
     );
