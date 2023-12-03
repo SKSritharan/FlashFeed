@@ -132,6 +132,87 @@ class LoadingEffect {
     );
   }
 
+  static Widget getHeadlinesLoadingScreen(BuildContext context,
+      {int itemCount = 4}) {
+    LoadingThemeData theme = LoadingThemeData.theme;
+
+    Widget singleLoading = Shimmer.fromColors(
+      baseColor: theme.shimmerBaseColor,
+      highlightColor: theme.shimmerHighlightColor,
+      child: Container(
+        margin: const EdgeInsets.only(right: 16),
+        width: MediaQuery.of(context).size.width * 0.8,
+        decoration: BoxDecoration(
+          color: theme.shimmerBaseColor,
+          borderRadius: const BorderRadius.all(Radius.circular(24)),
+          boxShadow: [
+            BoxShadow(
+              color: theme.shimmerBaseColor.withAlpha(120),
+              blurRadius: 24,
+              spreadRadius: 4,
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 150,
+              color: theme.shimmerBaseColor,
+            ),
+            Container(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 24,
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    color: theme.shimmerBaseColor,
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      Container(
+                        height: 28,
+                        width: 28,
+                        color: theme.shimmerBaseColor,
+                      ),
+                      const SizedBox(width: 16),
+                      Container(
+                        height: 16,
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        color: theme.shimmerBaseColor,
+                      ),
+                      Expanded(child: Container()),
+                      Container(
+                        height: 16,
+                        width: 48,
+                        color: theme.shimmerBaseColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    List<Widget> list = [];
+    for (int i = 0; i < itemCount; i++) {
+      list.add(singleLoading);
+    }
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.4,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: list,
+      ),
+    );
+  }
+
   static Widget getFavouriteLoadingScreen(BuildContext context,
       {int itemCount = 4}) {
     LoadingThemeData theme = LoadingThemeData.theme;

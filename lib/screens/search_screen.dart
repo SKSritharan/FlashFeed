@@ -11,6 +11,7 @@ import '../helpers/my_text_style.dart';
 import '../models/article.dart';
 import '../services/news_service.dart';
 import '../widgets/my_container.dart';
+import './single_news_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -62,7 +63,7 @@ class _SearchScreenState extends State<SearchScreen>
               Expanded(
                 child: TextFormField(
                   controller: searchController,
-                  onChanged: (value){
+                  onChanged: (value) {
                     setState(() {
                       searchController.text = value.toString();
                     });
@@ -141,7 +142,16 @@ class _SearchScreenState extends State<SearchScreen>
                           itemBuilder: (ctx, index) {
                             Article article = snapshot.data![index];
                             return InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => SingleNewsScreen(
+                                      article: article,
+                                    ),
+                                  ),
+                                );
+                              },
                               child: Container(
                                 margin: const EdgeInsets.only(top: 24),
                                 child: Row(

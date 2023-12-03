@@ -5,7 +5,7 @@ import '../helpers/app_theme.dart';
 import '../helpers/navigation_theme.dart';
 import '../widgets/custom_bottom_navigation.dart';
 import './headline_screen.dart';
-import './news_feed_screen.dart';
+import 'news_source_screen.dart';
 import './search_screen.dart';
 import './setting_screen.dart';
 
@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: const <Widget>[
             HeadlineScreen(),
             SearchScreen(),
-            NewsFeedScreen(),
+            NewsSourceScreen(),
             SettingScreen(),
           ],
         ),
@@ -81,9 +81,9 @@ class _HomeScreenState extends State<HomeScreen> {
             inactiveColor: navigationTheme.unselectedItemColor,
           ),
           CustomBottomNavigationBarItem(
-            title: "My Feed",
-            icon: const Icon(LucideIcons.bookmark, size: 20),
-            activeIcon: const Icon(LucideIcons.bookmark, size: 20),
+            title: "News Source",
+            icon: const Icon(LucideIcons.newspaper, size: 20),
+            activeIcon: const Icon(LucideIcons.newspaper, size: 20),
             activeColor: navigationTheme.selectedItemColor,
             inactiveColor: navigationTheme.unselectedItemColor,
           ),
