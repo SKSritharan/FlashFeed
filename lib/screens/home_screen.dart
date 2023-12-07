@@ -5,7 +5,7 @@ import '../helpers/app_theme.dart';
 import '../helpers/navigation_theme.dart';
 import '../widgets/custom_bottom_navigation.dart';
 import './headline_screen.dart';
-import 'news_source_screen.dart';
+import './my_feed_screen.dart';
 import './search_screen.dart';
 import './setting_screen.dart';
 
@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: const <Widget>[
             HeadlineScreen(),
             SearchScreen(),
-            NewsSourceScreen(),
+            // MyFeedScreen(),
             SettingScreen(),
           ],
         ),
@@ -80,17 +80,17 @@ class _HomeScreenState extends State<HomeScreen> {
             activeColor: navigationTheme.selectedItemColor,
             inactiveColor: navigationTheme.unselectedItemColor,
           ),
+          // CustomBottomNavigationBarItem(
+          //   title: "My Feeds",
+          //   icon: const Icon(LucideIcons.bookmark, size: 20),
+          //   activeIcon: const Icon(LucideIcons.bookmark, size: 20),
+          //   activeColor: navigationTheme.selectedItemColor,
+          //   inactiveColor: navigationTheme.unselectedItemColor,
+          // ),
           CustomBottomNavigationBarItem(
-            title: "News Source",
-            icon: const Icon(LucideIcons.newspaper, size: 20),
-            activeIcon: const Icon(LucideIcons.newspaper, size: 20),
-            activeColor: navigationTheme.selectedItemColor,
-            inactiveColor: navigationTheme.unselectedItemColor,
-          ),
-          CustomBottomNavigationBarItem(
-            title: "Settings",
-            icon: const Icon(LucideIcons.settings, size: 20),
-            activeIcon: const Icon(LucideIcons.settings, size: 20),
+            title: "Info",
+            icon: const Icon(LucideIcons.info, size: 20),
+            activeIcon: const Icon(LucideIcons.info, size: 20),
             activeColor: navigationTheme.selectedItemColor,
             inactiveColor: navigationTheme.unselectedItemColor,
           ),

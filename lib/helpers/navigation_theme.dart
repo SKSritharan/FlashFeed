@@ -17,7 +17,7 @@ class NavigationTheme {
     themeType = themeType ?? AppTheme.themeType;
     if (themeType == ThemeType.light) {
       navigationBarTheme.backgroundColor = Colors.white;
-      navigationBarTheme.selectedItemColor = const Color(0xff3d63ff);
+      navigationBarTheme.selectedItemColor = const Color(0xffee1d26);
       navigationBarTheme.unselectedItemColor = const Color(0xff495057);
       navigationBarTheme.selectedOverlayColor = const Color(0x383d63ff);
     } else {

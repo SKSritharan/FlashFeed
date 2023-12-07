@@ -74,7 +74,7 @@ class AppTheme {
     brightness: Brightness.light,
 
     /// Primary Color
-    primaryColor: const Color(0xff3C4EC5),
+    primaryColor: const Color(0xffee1d26),
     scaffoldBackgroundColor: const Color(0xffffffff),
     canvasColor: Colors.transparent,
 
@@ -93,12 +93,12 @@ class AppTheme {
 
     /// Floating Action Theme
     floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: const Color(0xff3C4EC5),
+        backgroundColor: const Color(0xffee1d26),
         splashColor: const Color(0xffeeeeee).withAlpha(100),
         highlightElevation: 8,
         elevation: 4,
-        focusColor: const Color(0xff3C4EC5),
-        hoverColor: const Color(0xff3C4EC5),
+        focusColor: const Color(0xffee1d26),
+        hoverColor: const Color(0xffee1d26),
         foregroundColor: const Color(0xffeeeeee)),
 
     /// Divider Theme
@@ -123,12 +123,12 @@ class AppTheme {
     /// CheckBox theme
     checkboxTheme: CheckboxThemeData(
       checkColor: MaterialStateProperty.all(const Color(0xffeeeeee)),
-      fillColor: MaterialStateProperty.all(const Color(0xff3C4EC5)),
+      fillColor: MaterialStateProperty.all(const Color(0xffee1d26)),
     ),
 
     /// Radio theme
     radioTheme: RadioThemeData(
-      fillColor: MaterialStateProperty.all(const Color(0xff3C4EC5)),
+      fillColor: MaterialStateProperty.all(const Color(0xffee1d26)),
     ),
 
     ///Switch Theme
@@ -153,7 +153,7 @@ class AppTheme {
           MaterialState.selected,
         };
         if (state.any(interactiveStates.contains)) {
-          return const Color(0xff3C4EC5);
+          return const Color(0xffee1d26);
         }
         return null;
       }),
@@ -181,7 +181,7 @@ class AppTheme {
     indicatorColor: const Color(0xffeeeeee),
     highlightColor: const Color(0xffeeeeee),
     colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xff3C4EC5), brightness: Brightness.light)
+            seedColor: const Color(0xffee1d26), brightness: Brightness.light)
         .copyWith(background: const Color(0xffffffff))
         .copyWith(error: const Color(0xfff0323c)),
   );
@@ -271,7 +271,7 @@ class AppTheme {
           MaterialState.selected,
         };
         if (state.any(interactiveStates.contains)) {
-          return const Color(0xff3C4EC5);
+          return const Color(0xffee1d26);
         }
         return null;
       }),

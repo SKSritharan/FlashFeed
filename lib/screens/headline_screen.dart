@@ -89,8 +89,7 @@ class _HeadlineScreenState extends State<HeadlineScreen> {
                   future: fetchTopHeadlines(),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return LoadingEffect.getHeadlinesLoadingScreen(
-                                context);
+                      return LoadingEffect.getHeadlinesLoadingScreen(context);
                     } else if (snapshot.hasError) {
                       return Center(child: Text('Error: ${snapshot.error}'));
                     } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
@@ -290,8 +289,8 @@ class _HeadlineScreenState extends State<HeadlineScreen> {
                                               children: [
                                                 MyText.bodyMedium(
                                                   article.title.length > 80
-                                                ? '${article.title.substring(0, 80)}...'
-                                                : article.title,
+                                                      ? '${article.title.substring(0, 80)}...'
+                                                      : article.title,
                                                   color: theme
                                                       .colorScheme.onBackground,
                                                   fontWeight: 600,
