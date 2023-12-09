@@ -1,4 +1,4 @@
-package com.example.flash_feed
+package com.flash_feed.news
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -5,7 +5,7 @@ import '../helpers/app_theme.dart';
 import '../helpers/navigation_theme.dart';
 import '../widgets/custom_bottom_navigation.dart';
 import './headline_screen.dart';
-import './my_feed_screen.dart';
+// import './my_feed_screen.dart';
 import './search_screen.dart';
 import './setting_screen.dart';
 

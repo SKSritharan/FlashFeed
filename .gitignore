@@ -44,3 +44,5 @@ app.*.map.json
 
 # Constants
 constants.dart
+key.properties
+app/upload-keystore.jks
